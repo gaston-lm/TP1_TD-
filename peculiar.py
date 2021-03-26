@@ -1,5 +1,5 @@
 '''
-Funciones
+Funciones 
     - misma_paridad
     - alterna_paridad
     - es_peculiar
