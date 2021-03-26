@@ -8,44 +8,103 @@ Funciones
     
 '''
 def es_par (n:int) -> str:
-    
+    """Dice si un numero es par.
+       Pre: Ninguna
+       Post: Devuelve True si n es par y False si es impar.
+    """
+    vr:bool = (n % 2 == 0)
+    return vr
     
 
 def misma_paridad (n:int, m:int) -> str:
     '''
-    Dados n; m que pertenecen a L (donde L= naturales + 0), determina
-    si n y m son ambos pares, o bien ambos impares
+    Dados n; m que pertenecen a L (donde L = naturales + 0), determina
+    si n y m son ambos pares, o si bien alguno no es impar.
     Precondición: n, m >=0
     Postcondición: imprime 'sí' si ambos números son pares/impares e imprime
        es 'no' si la paridad de los númemros es distinta
     '''
-    if n % 2 == 0 and m % 2 == 0:
-        print('sí')
-    elif  n % 2 == 1 and m % 2 == 1:
-        print('sí')
+    if es_par(n) and es_par(m) or not es_par(n) and not es_par(m):
+        #print("sí")
+        return True  
     else:
-        print('no')
+        return False
+        #print('no')
 '''
 PREGUNTAR SI HAY QUE HACER QUE DIGA ERROR CUANDO LE METES CON COMA
 '''
-n:int = 494.544
-m:int = 54546546.65464564
+n:int = 1212
+m:int = 5555
 
-misma_paridad(n, m)
+if misma_paridad(n, m) == True:
+    print("sí")
+else:
+    print("no")
 
-# def alterna_paridad (n:int) -> str:
-#     '''
-#     Dado n perteneciente a L (donde L= naturales + 0),  determina si los 
-#     dígitos de n alternan su paridad 1 a 1
-#     Precondición: n >=0
-#     Postcondición: imrprime 'sí' si los dígitos alternan su paridad y si no,
-#     imprime 'no'
-#     '''
-
-# i=0
-# if i=0 repetir hasta len(n):
-#     'hola'[i]
-#     i = i + 1
-
+def alterna_paridad (n:int) -> str:
+    '''
+    Dado n perteneciente a L (donde L= naturales + 0),  determina si los 
+    dígitos de n alternan su paridad 1 a 1
+    Precondición: n >= 0
+    Postcondición: imprime 'sí' si los dígitos alternan su paridad y "no"
+    si no lo hacen.
+    '''
+    #Predicado invariante
+    i:int = 0
+    #vt:int = 0
+    
+    while i != len(str(n)):
         
+        str(n) [i]
+        i = i + 1
+        print(i)
+        #este print es para checkear que
+        #analice todas las cifras de n
+        if not misma_paridad(i, i+1) == True:
+            # vt:int = vt + 1
+            # if vt == n:
+            #     print(vt)
+            return
+        else:
+            return False   
+        return True
+    
+#Mostrar q el ciclo termina en word
+        
+#si todos son True, entonces el n alterna paridad
+#Como hacemos para que checkee que todos son True en el while?
+#actualmente con un solo while te tira q todo bien
+
+if alterna_paridad(n) == True:
+    print("sí(alternan paridad)")
+else: 
+    print("no(no alternan paridad)")
+
+def es_peculiar(n:int) -> str:
+    ''' 
+    Determina si n es lo que se considera un numero "peculiar".
+    Precondición: n >= 0 (n pertenece a L = naturales + 0)
+    Postcondición: 
+    '''        
+    if n % 22 == 1:
+        print
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
