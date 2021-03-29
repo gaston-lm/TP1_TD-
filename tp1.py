@@ -11,20 +11,17 @@ def alterna_paridad (n:int) -> str:
     string_n:str = str(n)
     vr:bool = True
     print(len(string_n))
-
+    #1244
+    #len 4
     while i < len(string_n)-1:
         
-        j = i + 1
         print(string_n[i])
-        print(string_n[j])
+        print(string_n[i+1])
 
-        if not misma_paridad(int(string_n[i]),int(string_n[i+1])):
-            vr = True
-            i = i + 1
-        else:
-            vr = False
-            i = len(string_n)-1
+        vr = vr and not misma_paridad(int(string_n[i]),int(string_n[i+1]))
+        i = i + 1
+            
 
     return vr
         
-print(alterna_paridad(1244))
+print(alterna_paridad(1234))
