@@ -1,27 +1,25 @@
-from peculiar import misma_paridad
+import sys.arg
+from peculiar import (misma_paridad, alterna_paridad, es_peculiar, 
+n_esimo_peculiar, cant_peculiares_entre)
 
-def alterna_paridad (n:int) -> str:
-    ''' Dado n perteneciente a L (donde L= naturales + 0),  determina si los 
-        dígitos de n alternan su paridad
-        Precondición: n >= 0
-        Postcondición: imprime 'sí' si los dígitos alternan su paridad y "no"
-        si no lo hacen.
-    '''
-    i:int = 0
-    string_n:str = str(n)
-    vr:bool = True
-    print(len(string_n))
-    #1244
-    #len 4
-    while i < len(string_n)-1:
-        
-        print(string_n[i])
-        print(string_n[i+1])
+# if misma_paridad(n, m) == True:
+#     print("sí")
+# else:
+#     print("no")
 
-        vr = vr and not misma_paridad(int(string_n[i]),int(string_n[i+1]))
-        i = i + 1
-            
+# if alterna_paridad(n):
+#     print("sí(alternan paridad)")
+# else: 
+#     print("no(no alternan paridad)")
 
-    return vr
-        
-print(alterna_paridad(1234))
+# if es_peculiar(0):
+#     print("sí")
+# else: 
+#     print("no") 
+
+#print(n_esimo_peculiar(0))   
+#print(n_esimo_peculiar(1))
+#print(n_esimo_peculiar(15))
+
+#print(cant_peculiares_entre(100, 200))
+#print(cant_peculiares_entre(100, 1000))
