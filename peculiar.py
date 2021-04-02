@@ -25,7 +25,7 @@ def misma_paridad (n:int, m:int) -> bool:
     Post: vr equivale a que ambos números son pares o impares
     '''
 
-    vr:bool=(es_par(n) and es_par(m) or not es_par(n) and not es_par(m))
+    vr:bool = es_par(n) and es_par(m) or not es_par(n) and not es_par(m)
     return vr
 
 
@@ -42,7 +42,7 @@ def alterna_paridad(n:int) -> bool:
     string_n:str = str(n)
     vr:bool = True
     #a
-    while i < len(string_n)-1:
+    while i <= len(string_n):
         #b
         vr = vr and not misma_paridad(int(string_n[i]),int(string_n[i+1]))
         i = i + 1
