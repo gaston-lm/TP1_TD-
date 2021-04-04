@@ -1,4 +1,4 @@
-import sys.arg
+#import sys.arg
 from peculiar import (misma_paridad, alterna_paridad, es_peculiar, 
 n_esimo_peculiar, cant_peculiares_entre)
 
@@ -17,7 +17,7 @@ n_esimo_peculiar, cant_peculiares_entre)
 # else: 
 #     print("no") 
 
-#print(n_esimo_peculiar(0))   
+print(n_esimo_peculiar(7))   
 #print(n_esimo_peculiar(1))
 #print(n_esimo_peculiar(15))
 

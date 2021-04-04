@@ -14,7 +14,7 @@ def es_par (n:int) -> bool:
     Pre: Ninguna
     Post: Devuelve True si n es par y False si es impar.
     '''
-    vr:bool = (n % 2 == 0)
+    vr:bool = n % 2 == 0
     return vr
     
 
@@ -33,22 +33,22 @@ def alterna_paridad(n:int) -> bool:
     '''
     Determina si los dígitos de n alternan su paridad
     Pre: n >= 0 (n pertenece a L = naturales + 0)
-    Predicado invariante: 1 <= i <= len(n)
-                          vr equivale a que los dígitos  de n alternan 
-                          su paridad hasta el analisis en la posición i
     Post: vr equivale a que los dígitos de n alternen su paridad después de i
     '''
     i:int = 0
     string_n:str = str(n)
     vr:bool = True
-    #a
-    while i <= len(string_n):
-        #b
+    # I = vr equivale a que los dígitos  de n alternan 
+    #su paridad hasta el análisis en la posición i
+    # I = 0 <= i <= len(string_n)
+    # (A)
+    while i < len(string_n)-1:
+        # (B)
         vr = vr and not misma_paridad(int(string_n[i]),int(string_n[i+1]))
         i = i + 1
-        #c            
+        # (C)            
+    # (D)
     return vr
-    #d
 
 
 def es_peculiar(n:int) -> bool:
@@ -71,16 +71,18 @@ def n_esimo_peculiar(n:int) -> bool:
     i:int = 0 #Contador de n-ésimos peculiares 
     j:int = 0
     vr:int = 0
-    
+    # I = vr
+    # (A)
     while i < n:
-        
+        # (B)
         j = j + 1
         vr = j * 22
         if alterna_paridad(vr):
             i = i + 1 
-    #c        
+        # (C)
+    # (D)        
     return vr
-            
+          
 
 def cant_peculiares_entre(n:int, m:int) -> int:
     '''
