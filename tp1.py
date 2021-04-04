@@ -1,25 +1,43 @@
-#import sys.arg
+import sys
+
 from peculiar import (misma_paridad, alterna_paridad, es_peculiar, 
 n_esimo_peculiar, cant_peculiares_entre)
 
-# if misma_paridad(n, m) == True:
-#     print("sí")
-# else:
-#     print("no")
+def procesar_llamado_por_consola():
+    nombre_funcion:str = sys.argv[1]
+    numero_ingresado_uno:int = int(sys.argv[2])
 
-# if alterna_paridad(n):
-#     print("sí(alternan paridad)")
-# else: 
-#     print("no(no alternan paridad)")
+    if nombre_funcion == 'misma_paridad':
 
-# if es_peculiar(0):
-#     print("sí")
-# else: 
-#     print("no") 
+        numero_ingresado_dos:int = int(sys.argv[3])
 
-print(n_esimo_peculiar(7))   
-#print(n_esimo_peculiar(1))
-#print(n_esimo_peculiar(15))
+        if misma_paridad(numero_ingresado_uno, numero_ingresado_dos):
+            print('sí')
+        else:
+            print('no')
 
-#print(cant_peculiares_entre(100, 200))
-#print(cant_peculiares_entre(100, 1000))
+    if nombre_funcion == 'alterna_paridad':
+
+        if alterna_paridad(numero_ingresado_uno):
+            print('sí')
+        else:
+            print('no')
+
+    if nombre_funcion == 'es_peculiar':
+
+        if es_peculiar(numero_ingresado_uno):
+            print('sí')
+        else:
+            print('no')
+
+    if nombre_funcion == 'n_esimo_peculiar':
+
+        print(n_esimo_peculiar(numero_ingresado_uno))
+
+    if nombre_funcion == 'cant_peculiares_entre':
+
+        numero_ingresado_dos:int = int(sys.argv[3])
+
+        print(cant_peculiares_entre(numero_ingresado_uno, numero_ingresado_dos))
+
+procesar_llamado_por_consola()
