@@ -16,25 +16,25 @@ def procesar_llamado_por_consola():
         else:
             print('no')
 
-    if nombre_funcion == 'alterna_paridad':
+    elif nombre_funcion == 'alterna_paridad':
 
         if alterna_paridad(numero_ingresado_uno):
             print('sí')
         else:
             print('no')
 
-    if nombre_funcion == 'es_peculiar':
+    elif nombre_funcion == 'es_peculiar':
 
         if es_peculiar(numero_ingresado_uno):
             print('sí')
         else:
             print('no')
 
-    if nombre_funcion == 'n_esimo_peculiar':
+    elif nombre_funcion == 'n_esimo_peculiar':
 
         print(n_esimo_peculiar(numero_ingresado_uno))
 
-    if nombre_funcion == 'cant_peculiares_entre':
+    elif nombre_funcion == 'cant_peculiares_entre':
 
         numero_ingresado_dos:int = int(sys.argv[3])
 
