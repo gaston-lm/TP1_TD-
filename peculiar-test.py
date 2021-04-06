@@ -1,7 +1,7 @@
 import unittest
 
-from peculiar import (es_par, misma_paridad, alterna_paridad, es_peculiar,
-n_esimo_peculiar, cant_peculiares_entre)
+from peculiar import (es_par, multiplo_de_22, misma_paridad, alterna_paridad, 
+                      es_peculiar, n_esimo_peculiar, cant_peculiares_entre)
 
 class TestEsPar (unittest.TestCase):
     def test_cero(self):
@@ -14,6 +14,18 @@ class TestEsPar (unittest.TestCase):
     def test_muchos_dígitos(self):
         self.assertFalse(es_par(16565551))
         self.assertTrue(es_par(165654864))
+        
+class TestEsMultiploDe22 (unittest.TestCase):
+    def test_cero(self):
+        self.assertTrue(multiplo_de_22(0))
+
+    def test_pocos_dígitos(self):
+        self.assertFalse(multiplo_de_22(1))
+        self.assertTrue(multiplo_de_22(44))
+
+    def test_muchos_dígitos(self):
+        self.assertFalse(multiplo_de_22(234252))
+        self.assertTrue(multiplo_de_22(234256))
 
 class TestMismaParidad (unittest.TestCase):
     def test_verdadero_un_dígito(self):
